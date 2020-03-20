@@ -64,7 +64,7 @@
 
     [task resume];
 
-    [self waitForExpectationsWithTimeout:10.0 handler:nil];
+    [self waitForExpectationsWithCommonTimeout];
 
     XCTAssertTrue(task.state == NSURLSessionTaskStateCompleted);
     XCTAssertNil(blockError);
@@ -85,7 +85,7 @@
 
     [task resume];
 
-    [self waitForExpectationsWithTimeout:10.0 handler:nil];
+    [self waitForExpectationsWithCommonTimeout];
 
     XCTAssertTrue(task.state == NSURLSessionTaskStateCompleted);
     XCTAssertNotNil(blockError);
